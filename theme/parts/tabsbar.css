@@ -63,14 +63,14 @@ tab {
 	color: var(--sweet-tabbar-tab-color) !important;
 	font-family: Cantarell, inherit;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 tab:hover {
 	color: var(--sweet-tabbar-tab-hover-color) !important;
 }
 tab[selected] {
 	color: var(--sweet-tabbar-tab-active-color) !important;
-	text-shadow: 0px 0px 2px var(--sweet-focused-urlbar-border-color);
+	/* text-shadow: 0px 0px 2px var(--sweet-focused-urlbar-border-color); */
 }
 tab:-moz-window-inactive {
 	color: var(--sweet-inactive-tabbar-tab-color) !important;
@@ -141,7 +141,7 @@ tab[selected]:-moz-window-inactive {
 } */
 
 /* Close tab button */
-:root {	
+:root {
 	--sweet-fill-icon: red !important;
 }
 .tab-close-button {
@@ -155,11 +155,15 @@ tab[selected]:-moz-window-inactive {
 	padding: 2px;
 	width: 16px;
 }
-
+@media (prefers-color-scheme: dark) {
+	.tab-close-button {
+		list-style-image: url("../icons/window-close-symbolic-light.svg") !important;
+	}
+}
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
-:root:not(:-moz-window-inactive) .tab-close-button:hover {	
+:root:not(:-moz-window-inactive) .tab-close-button:hover {
 	background-image: var(--sweet-button-background);
 	box-shadow: var(--sweet-button-box-shadow);
 	border: 1px solid var(--sweet-button-border-color);
@@ -191,17 +195,18 @@ tab[selected]:-moz-window-inactive {
 
 /* Active tab */
 .tab-background[selected=true] {
-	background:
+	/* background:
 	linear-gradient(
-	  to right, 
+	  to right,
 	  var(--sweet-start-gradient-color),
 	  var(--sweet-end-gradient-color)
 	)
-	left 
+	left
 	bottom
-	var(--sweet-tabbar-tab-active-background)    
-	no-repeat !important; 
-  	background-size: 100% 3px!important;
+	var(--sweet-tabbar-tab-active-background)
+	no-repeat !important;
+		background-size: 100% 3px!important; */
+	background: transparent !important;
 	border: 0 !important;
 	border-image: none !important;
 }
@@ -226,7 +231,7 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* Full width tabs */
-.tabbrowser-tab:not([style^="max-width"]):not([pinned]),
+/* .tabbrowser-tab:not([style^="max-width"]):not([pinned]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]) {
 	max-width: 100% !important;
 }
@@ -234,7 +239,7 @@ tab[selected]:-moz-window-inactive {
 .tabbrowser-tab:not([style^="max-width"]):not([pinned]):not([fadein]),
 .tabbrowser-tab[style^="max-width: 100px !important;"]:not([pinned]):not([fadein]) {
 	max-width: .1px !important;
-}
+} */
 
 /* Remove blank spaces on tabs start and end */
 #TabsToolbar .titlebar-spacer {
@@ -265,8 +270,8 @@ tab[selected]:-moz-window-inactive {
 }
 
 .tabbrowser-tab[class*="identity-color-"][pinned] .tab-content::before,
-.tabbrowser-tab[class*="identity-color-"][image] .tab-content::before, 
-.tabbrowser-tab[class*="identity-color-"][busy] .tab-content::before, 
+.tabbrowser-tab[class*="identity-color-"][image] .tab-content::before,
+.tabbrowser-tab[class*="identity-color-"][busy] .tab-content::before,
 .tabbrowser-tab[class*="identity-color-"][progress] .tab-content::before {
 	right: -10px;
 	top: -8px;

@@ -27,15 +27,29 @@
 	padding: 0 !important;
 }
 
+#urlbar-input-container > * {
+	border-image-slice: unset !important;
+}
+
+#page-action-buttons {
+	margin-right: 5px;
+}
+
+#urlbar-search-button,
+#tracking-protection-icon-container,
+#identity-box {
+	opacity: 0.5;
+}
+
 /* Entries focused */
 #urlbar:not(.megabar)[focused],
 #searchbar:focus-within,
-#search-box[focused], 
+#search-box[focused],
 .findbar-textbox[focused],
 .findbar-textbox:focus {
-	outline: 1.5px solid var(--sweet-focused-urlbar-border-color) !important;
-	outline-offset: -2px;
-	-moz-outline-radius: 5px;
+	outline: 0px solid var(--sweet-focused-urlbar-border-color) !important;
+	/* outline-offset: -2px;
+	-moz-outline-radius: 5px; */
 }
 
 /* Inactive window entries */

@@ -24,7 +24,7 @@
 }
 #urlbar.megabar[breakout][breakout-extend] {
 	left: 0 !important;
-	top: 0 !important;
+	top: 1px !important;
 	width: 100% !important;
 }
 #urlbar.megabar[breakout][breakout-extend]:not([open]) {
@@ -51,7 +51,7 @@
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
 	border-radius: 0 0 5px 5px !important;
 	border-color: var(--sweet-focused-urlbar-border-color) !important;
-	border-width: 2px !important;
+	border-width: 0px !important;
 }
 
 /* Center the URL bar */
@@ -88,9 +88,9 @@ toolbarspring {
 #urlbar .urlbarView {
 	left: calc(var(--item-padding-start) - 6px) !important;
 	right: var(--item-padding-end) !important;
-	top: 40px !important;
+	top: 41px !important;
 	z-index: 10 !important;
-	max-width: 100% !important;	
+	max-width: 100% !important;
 	background: var(--sweet-popover-background) !important;
 	border: 1px solid !important;
 	border-color: var(--sweet-popover-border-color) !important;
@@ -104,7 +104,7 @@ toolbarspring {
 	max-height: 35vh !important;
 	overflow-x: auto;
 }
-	
+
 #urlbar .search-one-offs {
 	padding: 8px 0 0 0 !important;
 	margin-top: 8px !important;
@@ -180,17 +180,17 @@ toolbarspring {
 	background: var(--sweet-button-hover-background) !important;
 	color: unset !important;
 }
-#urlbar .searchbar-engine-one-off-item:first-child {	
+#urlbar .searchbar-engine-one-off-item:first-child {
 	border-radius: 5px 0 0 5px;
 	border-left-width: 1px !important;
 }
-#urlbar .searchbar-engine-one-off-item.last-engine, .searchbar-engine-one-off-item:last-child {	
+#urlbar .searchbar-engine-one-off-item.last-engine, .searchbar-engine-one-off-item:last-child {
 	border-radius: 0 5px 5px 0;
 }
 
 #urlbar  #urlbar-anon-search-settings-compact {
 	border-left-width: 1px !important;
-	border-bottom: 1px solid var(--sweet-button-border-accent-color) !important;
-	border-radius: 5px;	
+	border-bottom: 0px solid var(--sweet-button-border-accent-color) !important;
+	border-radius: 5px;
 	margin-left: 6px !important;
 }

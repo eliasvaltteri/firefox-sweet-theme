@@ -4,6 +4,7 @@
 
 #main-window {
 	-moz-appearance: -moz-window-titlebar !important;
+	margin-top: -1px !important;
 }
 
 /* Headerbar top border corners rounded */
@@ -14,7 +15,7 @@
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 50px !important;
+		padding-right: 30px !important;
 	}
 }
 /* Window buttons: at least 2 buttons */
@@ -22,13 +23,13 @@
        (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
        (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 90px !important;
+		padding-right: 50px !important;
 	}
 }
 /* Window buttons: 3 buttons */
 @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 130px !important;
+		padding-right: 90px !important;
 	}
 }
 
@@ -43,7 +44,7 @@
 :root[tabsintitlebar][inFullscreen] #window-controls {
 	-moz-appearance: none !important;
 	padding: 0 3px 0 4px;
-	position: absolute !important;	
+	position: absolute !important;
 	right: 0;
 	top: 0;
 	display: flex !important;
@@ -55,7 +56,7 @@
 /* Window buttons style */
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
-	border: 1px solid var(--sweet-button-border-color) !important;
+	border: 0px solid var(--sweet-button-border-color) !important;
 	border-color: transparent !important;
 	border-radius: 5px !important;
 	height: 30px;
@@ -92,12 +93,12 @@
 	display: none;
 }
 
-/* Left window buttons */	
-@media (-moz-gtk-csd-reversed-placement) {	
+/* Left window buttons */
+@media (-moz-gtk-csd-reversed-placement) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
 		padding-right: 3px !important;
 	}
-	
+
 	/* Window buttons box */
 	:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
 		padding: 0 3px 0 4px;
@@ -108,7 +109,7 @@
 	/* Window controls: at least 1 button */
 	@media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-			padding-left: 50px !important;
+			padding-left: 5z0px !important;
 		}
 	}
 	/* Window controls: at least 2 buttons */
@@ -124,7 +125,7 @@
 		:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
 			padding-left: 90px !important;
 		}
-	} 
+	}
 }
 
 /* Remove tabsbar titlebar blank spaces */
@@ -155,7 +156,7 @@
 	-moz-window-dragging: drag;
 }
 
-:root[tabsintitlebar] #nav-bar .urlbar-input-box, 
+:root[tabsintitlebar] #nav-bar .urlbar-input-box,
 :root[tabsintitlebar] #nav-bar .urlbar-input-box *,
 #back-button,
 #forward-button{
@@ -177,6 +178,6 @@
 	padding: 0 !important;
 	margin: 0 !important;
 }
-:root[tabsintitlebar] #titlebar-content .titlebar-button {	
+:root[tabsintitlebar] #titlebar-content .titlebar-button {
 	padding: 0 7px !important;
 }
